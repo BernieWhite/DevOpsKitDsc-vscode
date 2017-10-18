@@ -6,10 +6,10 @@ This **preview** extension for Visual Studio Code adds convenience features for 
 | --- | --- |
 | [![av-image][]][av-site] | [![cc-image][]][cc-site] |
 
-[av-image]: https://ci.appveyor.com/api/projects/status/29gj31o96ajd2ars
+[av-image]: https://ci.appveyor.com/api/projects/status/b3bn5mymkonomjb4
 [av-site]: https://ci.appveyor.com/project/BernieWhite/devopskitdsc-vscode
 [cc-image]: https://codecov.io/gh/BernieWhite/DevOpsKitDsc-vscode/branch/master/graph/badge.svg
-[cc-site]: https://codecov.io/gh/BernieWhite/DevOpsKitDsc=vscode
+[cc-site]: https://codecov.io/gh/BernieWhite/DevOpsKitDsc-vscode
 
 ## Disclaimer
 
