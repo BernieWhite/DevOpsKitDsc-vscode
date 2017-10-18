@@ -1,0 +1,11 @@
+.vscode/**
+typings/**
+out/test/**
+test/**
+src/**
+build/**
+reports/**
+**/*.map
+.gitignore
+tsconfig.json
+*.vsix

@@ -1,0 +1,45 @@
+{
+	// See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"taskName": "Compile",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"compile",
+				"--loglevel",
+				"silent"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"isBackground": true,
+			"problemMatcher": [
+				"$tsc-watch"
+			]
+		},
+		{
+			"taskName": "Package",
+			"type": "shell",
+			"command": "vsce",
+			"args": [
+				"package"
+			],
+			"problemMatcher": [ ]
+		},
+		{
+			"taskName": "Install",
+			"type": "shell",
+			"command": "code",
+			"args": [
+				"--install-extension",
+				".\\dokd-vscode-0.0.1.vsix"
+			],
+			"problemMatcher": [ ]
+		}
+	]
+}

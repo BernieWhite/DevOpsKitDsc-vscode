@@ -1,0 +1,6 @@
+/build/
+/reports/
+/out/
+/node_modules/
+*.vsix
+package-lock.json
