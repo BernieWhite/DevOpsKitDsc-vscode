@@ -3,7 +3,7 @@
 	"displayName": "DevOps Kit for DSC",
 	"version": "0.0.1",
 	"publisher": "bewhite",
-	"description": "Add commands and JSON schema validation to VSCode for working with DevOps Kit for DSC.",
+	"description": "Adds convenience features for IT Pros using DevOps Kit for DSC.",
 	"engines": {
 		"vscode": "^1.16.0"
 	},
