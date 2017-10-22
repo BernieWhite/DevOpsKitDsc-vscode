@@ -9,3 +9,4 @@ reports/**
 .gitignore
 tsconfig.json
 *.vsix
+*.yml
