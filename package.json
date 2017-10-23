@@ -1,7 +1,7 @@
 {
 	"name": "dokd-vscode-preview",
 	"displayName": "DevOps Kit for DSC",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"publisher": "bewhite",
 	"description": "Adds convenience features for IT Pros using DevOps Kit for DSC.",
 	"engines": {
