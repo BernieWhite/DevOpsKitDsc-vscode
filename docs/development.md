@@ -1,4 +1,4 @@
-# Deveopment instructions
+# Development instructions
 
 ## Debugging locally
 
