@@ -97,7 +97,7 @@ function buildAll(): void {
 
     let t = getTerminal();
 
-    t.sendText(`Start-DOKDscCompilationJob;`, true);
+    t.sendText(`Invoke-DOKDscBuild;`, true);
     t.show();
 }
 
@@ -225,7 +225,7 @@ function createBuildTask(collectionName: string, rootPath: string, folder: Works
 	}
 
 	function getDOKCommandLine(folder: WorkspaceFolder): string {
-		return `Start-DOKDscCompilationJob -WorkspacePath '${folder.uri.fsPath}' -Name '${collectionName}';`;
+		return `Invoke-DOKDscBuild -WorkspacePath '${folder.uri.fsPath}' -Name '${collectionName}';`;
 	}
 
 	let kind: DOKDscBuildTaskDefinition = {
