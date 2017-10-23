@@ -1,9 +1,9 @@
 {
-	"name": "dokd-vscode",
+	"name": "dokd-vscode-preview",
 	"displayName": "DevOps Kit for DSC",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"publisher": "bewhite",
-	"description": "Add commands and JSON schema validation to VSCode for working with DevOps Kit for DSC.",
+	"description": "Adds convenience features for IT Pros using DevOps Kit for DSC.",
 	"engines": {
 		"vscode": "^1.16.0"
 	},
@@ -32,7 +32,8 @@
 		"onCommand:workbench.action.tasks.runTask",
 		"onCommand:dokd.initWorkspace",
 		"onCommand:dokd.restoreModules",
-		"onCommand:dokd.buildAll"
+		"onCommand:dokd.buildAll",
+		"onCommand:dokd.newCollection"
 	],
 	"contributes": {
 		"commands": [
@@ -50,6 +51,11 @@
 				"command": "dokd.buildAll",
 				"category": "DOK Dsc",
 				"title": "Build all workspace collections"
+			},
+			{
+				"command": "dokd.newCollection",
+				"category": "DOK Dsc",
+				"title": "New collection"
 			}
 		],
 		"taskDefinitions": [

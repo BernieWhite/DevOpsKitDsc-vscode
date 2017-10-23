@@ -4,7 +4,7 @@
 
 'use strict';
 
-import { ExtensionContext, window, workspace, WorkspaceFolder, commands, debug, Terminal, languages, CompletionItem, CompletionItemKind, Task, TaskDefinition, Disposable, ShellExecution, ProcessExecution } from 'vscode';
+import { ExtensionContext, window, workspace, WorkspaceFolder, commands, debug, Terminal, languages, CompletionItem, CompletionItemKind, Task, TaskDefinition, Disposable, ShellExecution, ProcessExecution, InputBoxOptions } from 'vscode';
 import * as path from 'path';
 import * as fs from 'fs';
 
@@ -21,6 +21,7 @@ export function activate(context: ExtensionContext) {
     context.subscriptions.push(commands.registerCommand('dokd.initWorkspace', () => initWorkspace()));
     context.subscriptions.push(commands.registerCommand('dokd.restoreModules', () => restoreModules()));
     context.subscriptions.push(commands.registerCommand('dokd.buildAll', () => buildAll()));
+    context.subscriptions.push(commands.registerCommand('dokd.newCollection', () => newCollection()));
 
     // Trap terminal closure event to clean up terminal reference
     if ('onDidCloseTerminal' in <any>window) {
@@ -97,8 +98,26 @@ function buildAll(): void {
 
     let t = getTerminal();
 
-    t.sendText(`Start-DOKDscCompilationJob;`, true);
+    t.sendText(`Invoke-DOKDscBuild;`, true);
     t.show();
+}
+
+function newCollection(): void {
+
+    if (workspace == null) {
+        return;
+    }
+
+    window
+        .showInputBox({ prompt: "Enter the collection name", placeHolder: "Type the name of the collection to create" })
+        .then(response => {
+
+            if (response != undefined) {
+                let t = getTerminal();
+                t.sendText(`New-DOKDscCollection -Name '${response}';`, true);
+                t.show();
+            }
+        });
 }
 
 // Get an existing terminal instance or create a new one
@@ -225,7 +244,7 @@ function createBuildTask(collectionName: string, rootPath: string, folder: Works
 	}
 
 	function getDOKCommandLine(folder: WorkspaceFolder): string {
-		return `Start-DOKDscCompilationJob -WorkspacePath '${folder.uri.fsPath}' -Name '${collectionName}';`;
+		return `Invoke-DOKDscBuild -WorkspacePath '${folder.uri.fsPath}' -Name '${collectionName}';`;
 	}
 
 	let kind: DOKDscBuildTaskDefinition = {
