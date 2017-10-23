@@ -1,6 +1,10 @@
 # DevOps Kit for DSC
 
-This **preview** extension for Visual Studio Code adds convenience features for IT Pros using DevOps Kit for DSC. DevOps Kit for DSC is a PowerShell module available from the PowerShell Gallery.
+This **preview** extension for Visual Studio Code adds convenience features for IT Pros using DevOps Kit for DSC.
+
+DevOps Kit for DSC is a PowerShell module available from the PowerShell Gallery and is **required** for this extension to work.
+
+To install the module use `Install-Module -Name DevOpsKitDsc -Scope CurrentUser;` from a PowerShell prompt.
 
 | AppVeyor (Windows) | Codecov (Windows) |
 | --- | --- |
