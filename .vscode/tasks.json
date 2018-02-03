@@ -1,10 +1,10 @@
 {
 	// See https://go.microsoft.com/fwlink/?LinkId=733558
-    // for the documentation about the tasks.json format
+	// for the documentation about the tasks.json format
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"taskName": "Compile",
+			"label": "Compile",
 			"type": "shell",
 			"command": "npm",
 			"args": [
@@ -23,23 +23,23 @@
 			]
 		},
 		{
-			"taskName": "Package",
+			"label": "Package",
 			"type": "shell",
 			"command": "vsce",
 			"args": [
 				"package"
 			],
-			"problemMatcher": [ ]
+			"problemMatcher": []
 		},
 		{
-			"taskName": "Install",
+			"label": "Install",
 			"type": "shell",
 			"command": "code",
 			"args": [
 				"--install-extension",
-				".\\dokd-vscode-preview-0.0.1.vsix"
+				".\\dokd-vscode-preview-0.1.0.vsix"
 			],
-			"problemMatcher": [ ]
+			"problemMatcher": []
 		}
 	]
 }
