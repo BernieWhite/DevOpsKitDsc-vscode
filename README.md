@@ -4,7 +4,7 @@ This **preview** extension for Visual Studio Code adds convenience features for 
 
 DevOps Kit for DSC is a PowerShell module available from the PowerShell Gallery and is **required** for this extension to work.
 
-To install the module use `Install-Module -Name DevOpsKitDsc -Scope CurrentUser;` from a PowerShell prompt.
+To install the module use `Install-Module -Name DevOpsKitDsc -MinimumVersion 0.2.0 -Scope CurrentUser;` from a PowerShell prompt.
 
 | AppVeyor (Windows) | Codecov (Windows) |
 | --- | --- |
@@ -21,9 +21,20 @@ This project is to be considered a **proof-of-concept** and **not a supported Mi
 
 ## Features
 
+- Create collections
 - IntelliSense for editing workspace settings.json
 - Restore modules while editing
 - Automatically detect collections and build with tasks
+
+## Installing the Extension
+
+You can install the latest release of the extension by following the steps in the [Visual Studio Code documentation][vscode-ext-gallery]. In the Extensions pane, search for "DevOps Kit for DSC" extension and install it there. You will get notified automatically about any future extension updates!
+
+```
+code --install-extension bewhite.dokd-vscode-preview
+```
+
+> NOTE: If you are using VS Code Insiders, the command will be `code-insiders`.
 
 ## Maintainers
 
@@ -32,3 +43,5 @@ This project is to be considered a **proof-of-concept** and **not a supported Mi
 ## License
 
 This project is [licensed under the MIT License](LICENSE).
+
+[vscode-ext-gallery]: https://code.visualstudio.com/docs/editor/extension-gallery
