@@ -1,5 +1,7 @@
 # DevOps Kit for DSC
 
+[![ext-version-badge][]][ext] [![ext-installs-badge][]][ext]
+
 This **preview** extension for Visual Studio Code adds convenience features for IT Pros using DevOps Kit for DSC.
 
 DevOps Kit for DSC is a PowerShell module available from the PowerShell Gallery and is **required** for this extension to work.
@@ -45,3 +47,6 @@ code --install-extension bewhite.dokd-vscode-preview
 This project is [licensed under the MIT License](LICENSE).
 
 [vscode-ext-gallery]: https://code.visualstudio.com/docs/editor/extension-gallery
+[ext]: https://marketplace.visualstudio.com/items?itemName=bewhite.dokd-vscode-preview
+[ext-version-badge]: https://vsmarketplacebadge.apphb.com/version/bewhite.dokd-vscode-preview.svg
+[ext-installs-badge]: https://vsmarketplacebadge.apphb.com/installs-short/bewhite.dokd-vscode-preview.svg
