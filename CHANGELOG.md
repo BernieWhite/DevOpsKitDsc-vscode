@@ -1,6 +1,8 @@
 
 ## Unreleased
 
+## v0.2.0
+
 - Requires DevOpsKitDsc v0.2.0 or later
 - Added support for full and incremental collection builds
 - Added support for publishing collections
