@@ -1,6 +1,10 @@
 
 ## Unreleased
 
+## v0.2.1
+
+- Updated change log
+
 ## v0.2.0
 
 - Requires DevOpsKitDsc v0.2.0 or later
