@@ -37,7 +37,7 @@
 			"command": "code",
 			"args": [
 				"--install-extension",
-				".\\dokd-vscode-preview-0.1.0.vsix"
+				".\\dokd-vscode-preview-0.2.0.vsix"
 			],
 			"problemMatcher": []
 		}
